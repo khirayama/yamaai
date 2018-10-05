@@ -1,0 +1,23 @@
+{
+  "name": "yamaai",
+  "version": "1.0.0",
+  "description": "Ref: https://yamaai.jimdofree.com/ Ref: https://yamabiyori.tumblr.com/",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "(cd docs && python -m http.server)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khirayama/yamaai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khirayama/yamaai/issues"
+  },
+  "homepage": "https://github.com/khirayama/yamaai#readme"
+}
