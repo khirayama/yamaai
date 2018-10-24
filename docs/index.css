@@ -362,10 +362,9 @@ html {
 
 /* Post page */
 .PostContent {
-  /* max-width: 768px; */
   max-width: 568px;
   margin: 0 auto;
-  padding-bottom: 68px;
+  padding: 8px 12px 68px;
 }
 .PostContent h1 {
   font-size: 1.2rem;
