@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "build:images": "ts-node bin/minimize-images.ts",
     "dev": "(cd docs && python -m http.server)"
   },
   "repository": {
