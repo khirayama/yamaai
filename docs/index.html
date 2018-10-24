@@ -27,113 +27,159 @@
       <!-- Header -->
       <header class="Header">
         <div class="Header--Content">
-          <div class="Header--Content--Heading">yamaai</div>
-          <ul class="Header--Content--SocialList">
-            <li class="Header--Content--SocialList--Item"><a href="#">f</a></li>
-            <li class="Header--Content--SocialList--Item"><a href="#">t</a></li>
-            <li class="Header--Content--SocialList--Item"><a href="#">i</a></li>
-          </ul>
+          <h1 class="Header--Content--Heading">
+            <img src="/images/logo.png" alt="yamaai" />
+          </h1>
         </div>
+        <ul class="Header--SocialList">
+          <li class="Header--SocialList--Item">
+            <a href="#"><img src="/images/icon_facebook.svg" alt="facebook" /></a>
+          </li>
+          <li class="Header--SocialList--Item">
+            <a href="#"><img src="/images/icon_twitter.svg" alt="twitter" /></a>
+          </li>
+          <li class="Header--SocialList--Item">
+            <a href="#"><img src="/images/icon_instagram.svg" alt="instagram" /></a>
+          </li>
+        </ul>
       </header>
-      <!-- MainVisual -->
-      <div class="MainVisual">
-        <div class="MainVisual--Image">
-          <img class="Image" src="./images/image_rectangle.jpg" />
-        </div>
+      <div class="MainDivider">
+        <img src="/images/divider.png" alt="yamaai" />
+      </div>
+      <h2 class="Copy">山と 暮らしと 出合う</h2>
+      <!-- Message -->
+      <div class="Message">
+        <p>
+        民泊yamaai-山合- は<br>
+        福岡県糸島市の山間、小さな集落の中にあります。<br>
+        田園風景の広がるこの集落には、昔ながらの生活が垣間見えます。<br>
+        刻々と変わる、山の空気、山の生きものたちに囲まれた営みの中で<br>
+        それぞれの心地のいい時間をお過ごしください。
+        </p>
       </div>
       <nav class="Navigation">
         <ul class="Navigation--List">
-          <li class="Navigation--List--Item"><a href="#message">ご挨拶</a></li>
-          <li class="Navigation--List--Item"><a href="#fee">料金・詳細</a></li>
-          <li class="Navigation--List--Item"><a href="#access">アクセス</a></li>
-          <li class="Navigation--List--Item"><a href="#reservation">ご予約・空室状況</a></li>
+          <li class="Navigation--List--Item"><a href="#about">宿とご飯</a></li>
+          <li class="Navigation--List--Item"><a href="#access">地図</a></li>
+          <li class="Navigation--List--Item"><a href="#reservation">ご予約・料金</a></li>
           <li class="Navigation--List--Item"><a href="#diary">日記</a></li>
         </ul>
       </nav>
-      <!-- Message -->
-      <h2 class="ContentHeader" id="message">ご挨拶</h2>
-      <div class="Message">
-        <p>
-          yamaaiは糸島の山間にある一軒の宿です。<br>
-          この宿には私たちも一緒に暮らしています。<br>
-          刻々と変わる、山の空気、山の生きものたちに囲まれた暮らしは
-          心地のいい加減をおしえてくれます。<br>
-        </p>
-      </div>
-      <div class="Sign">
-        山と出合うところ、yamaai -山合-
-      </div>
-      <!-- Fee -->
-      <h2 class="ContentHeader" id="fee">料金・詳細</h2>
+      <!-- About -->
+      <h2 class="ContentHeader" id="about">宿とご飯</h2>
       <div class="Column">
         <div class="Column--Item">
-          <img src="./images/image2.jpg" class="Image" />
+          <img class="Image" src="./images/image2.jpg" />
+        </div>
+        <div class="Column--Item">
+          <ul class="ImageList">
+            <li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li><li class="ImageList--Item">
+              <img src="./images/image2.jpg" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Access -->
+      <h2 class="ContentHeader" id="access">地図</h2>
+      <div class="Column">
+        <div class="Column--Item">
+          <a href="https://goo.gl/maps/3uLyYV5ThcN2">
+            <img class="Image" src="./images/map.png" />
+          </a>
+        </div>
+        <div class="Column--Item">
+          &#12306; 812-0000<br>
+          福岡県糸島市XXXX XXXX XXXXX
+          <div class="Button">
+            <a href="https://goo.gl/maps/3uLyYV5ThcN2">地図で開く</a>
+          </div>
+        </div>
+      </div>
+      <!-- Reservation -->
+      <h2 class="ContentHeader" id="reservation">ご予約・料金</h2>
+      <div class="Column">
+        <div class="Column--Item">
+          <p>お電話での予約を承っています。</p>
+          <p>受付時間: 金・土・日・月 10:00 - 16:00</p>
+          <p>
+            <a href="tel:05013133063">&#9742; 050 1313 3063</a>
+          </p>
+          <div class="Button">
+            <a href="tel:05013133063">電話する</a>
+          </div>
         </div>
         <div class="Column--Item">
           <table>
             <tbody>
               <tr>
                 <th>宿泊料金</th>
-                <td>1泊2日6,000円 (朝食がついてます。)</td>
+                <td>1泊2日朝食付き</td>
+                <td>6,000円</td>
+              </tr>
+              <tr>
+                <th></th>
+                <td>1泊2日朝食・夕食付き</td>
+                <td>7,500円</td>
+              </tr>
+              <tr>
+                <th></th>
+                <td colspan="2">
+                  <p class="Note">ごはんはみんなで作って食べます。宿泊料はチェックイン時にお支払いください。</p>
+                </td>
               </tr>
               <tr>
                 <th>定員</th>
-                <td>6名(2部屋に分かれます)</td>
+                <td colspan="2">6名(2部屋に分かれます)</td>
               </tr>
               <tr>
                 <th>設備</th>
-                <td>台所(一緒に炊事ができます)、談話室(食事ができます)、浴室、トイレ、扇風機、ドライヤー、Wi-Fi、蚊やり線香、布団、フェイスタオル</td>
+                <td colspan="2">
+                  台所(一緒に炊事ができます)<br>
+                  談話室(食事ができます)<br>
+                  浴室、トイレ、<br>
+                  扇風機、ファンヒーター<br>
+                  ドライヤー、フェイスタオル<br>
+                  Wi-Fi
+                </td>
               </tr>
               <tr>
                 <th>お支払い</th>
-                <td>チェックイン時に現金でお支払いください。</td>
+                <td colspan="2">チェックイン時に現金でお支払いください。</td>
               </tr>
               <tr>
                 <th>チェックイン</th>
-                <td>16:00 - 20:00</td>
+                <td colspan="2">16時〜20時</td>
               </tr>
               <tr>
                 <th>チェックアウト</th>
-                <td>10:00</td>
+                <td colspan="2">10時まで</td>
               </tr>
               <tr>
                 <th>営業日</th>
-                <td>金・土・日・月</td>
+                <td colspan="2">金・土・日・月</td>
               </tr>
               <tr>
                 <th>そのほか</th>
-                <td>夕食ご希望の方は別途1,500円で用意できます。お水、お茶はお部屋前に置いてます。</td>
+                <td colspan="2">お水、お茶はお部屋前に置いてます。</td>
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-      <!-- Access -->
-      <h2 class="ContentHeader" id="access">アクセス</h2>
-      <div class="Column">
-        <div class="Column--Item">
-          <a href="https://goo.gl/maps/3uLyYV5ThcN2">
-            <img src="./images/map.png" class="Image" />
-          </a>
-        </div>
-        <div class="Column--Item">
-          &#12306; 812-0000<br>
-          福岡県糸島市XXXX XXXX XXXXX
-          <div>
-            <a href="https://goo.gl/maps/3uLyYV5ThcN2">地図で開く</a>
-          </div>
-        </div>
-      </div>
-      <!-- Reservation -->
-      <h2 class="ContentHeader" id="reservation">ご予約・空室状況</h2>
-      <div class="Column">
-        <div class="Column--Item">
-          <img src="./images/calender.png" class="Image" />
-        </div>
-        <div class="Column--Item">
-          <p>お電話での予約を承っています。</p>
-          <a href="tel:05013133063"></a>
-          <p>受付時間: 金・土・日・月 10:00 - 16:00</p>
         </div>
       </div>
       <!-- Diary -->
@@ -212,8 +258,8 @@
           </a>
         </li>
       </ul>
+      <footer class="Footer">Copyright &copy; yamaai. All right reserved.</footer>
     </main>
   </section>
-  <footer class="Footer">Copyright &copy; yamaai. All right reserved.</footer>
 </body>
 </html>

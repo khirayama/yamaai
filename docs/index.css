@@ -45,7 +45,7 @@ rect {
   font-weight: inherit;
   font-style: normal;
   font-size: inherit;
-  line-height: 1.4;
+  line-height: 1.6;
   vertical-align: baseline;
   font-feature-settings: 'palt';
   -webkit-tap-highlight-color: transparent;
@@ -89,57 +89,70 @@ html {
 
 /* Application */
 .Application {
+  background-image: url("/images/background.png");
 }
 .Application--Main {
+  background-color: rgba(255, 255, 255, 0.68);
 }
 
 /* Header */
 .Header {
-  position: relative;
-  z-index: 1;
+  background: #fff;
 }
 .Header--Content {
-  display: flex;
-  padding: 48px 12px 36px;
+  position: relative;
+  padding: 84px 12px 0;
   max-width: 768px;
   margin: 0 auto;
 }
 .Header--Content--Heading {
-  flex: 1;
   display: inline-block;
-  font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
-.Header--Content--SocialList {
-  flex: 1;
+.Header--Content--Heading img {
+  width: 188px;
+}
+.Header--SocialList {
+  position: absolute;
+  top: 16px;
+  right: 12px;
   text-align: right;
   display: inline-block;
 }
-.Header--Content--SocialList--Item {
+.Header--SocialList--Item {
   display: inline-block;
   text-align: center;
   width: 24px;
   height: 24px;
   line-height: 24px;
-  background: #666;
+  background: rgba(0, 0, 0, .56);
   color: #fff;
   border-radius: 3px;
 }
-/* MainVisual */
-.MainVisual {
-  width: 100%;
-  padding: 12px;
-  text-align: center;
+.Header--SocialList--Item + .Header--SocialList--Item {
+  margin-left: 8px;
 }
-.MainVisual--Image {
+/* Copy */
+.Copy {
+  text-align: center;
+  padding: 36px 12px 16px;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+/* Message */
+.Message {
   width: 100%;
   max-width: 768px;
+  padding: 12px;
   margin: 0 auto;
+  text-align: center;
 }
 /* Navigation */
 .Navigation {
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 16px 12px;
 }
 .Navigation--List {
   display: flex;
@@ -147,7 +160,7 @@ html {
 .Navigation--List--Item {
   flex: 1;
   text-align: center;
-  font-size: .75rem;
+  font-size: .875rem;
   padding: 12px 0;
   font-weight: bold;
 }
@@ -164,20 +177,6 @@ html {
 .Image {
   padding: 4px;
   border: solid 1px rgba(0, 0, 0, 0.12);
-}
-/* Message */
-.Message {
-  width: 100%;
-  max-width: 768px;
-  padding: 4px 12px;
-  margin: 0 auto;
-}
-.Sign {
-  width: 100%;
-  max-width: 768px;
-  padding: 12px;
-  margin: 0 auto;
-  text-align: right;
 }
 /* Column */
 .Column {
@@ -204,7 +203,27 @@ html {
     width: calc(50% - 3px);
   }
 }
-
+/* ImageList */
+.ImageList {
+}
+.ImageList .ImageList--Item {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / 3);
+  vertical-align: top;
+  padding-top: calc(100% / 3);
+  cursor: pointer;
+}
+.ImageList .ImageList--Item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  border: solid 1px rgba(0, 0, 0, 0.12);
+}
+/* PostList */
 .PostList {
   display: flex;
   flex-wrap: wrap;
@@ -269,4 +288,22 @@ html {
   text-align: center;
   font-size: 0.75rem;
   color: rgba(0, 0, 0, .64);
+}
+
+.Button {
+  display: inline-block;
+  width: 100%;
+  border: solid 1px rgba(0, 0, 0, .72);
+  padding: 8px;
+  text-align: center;
+  margin: 12px 0;
+  background: #fff;
+  font-weight: bold;
+}
+
+.Note {
+  display: inline-block;
+  width: 100%;
+  border: solid 1px rgba(0, 0, 0, .72);
+  padding: 8px;
 }
