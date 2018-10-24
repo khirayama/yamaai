@@ -205,6 +205,15 @@ html {
   }
 }
 /* ImageList */
+.ImageList--Display {
+  position: relative;
+  padding-top: calc(75% + 2rem);
+}
+.ImageList--Display--Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .ImageList {
 }
 .ImageList .ImageList--Item {

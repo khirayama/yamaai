@@ -69,71 +69,76 @@
       <h2 class="ContentHeader" id="about">宿とご飯</h2>
       <div class="Column">
         <div class="Column--Item">
-          <img class="Image" src="./images/image_yamaai1.jpg" />
+          <div class="ImageList--Display">
+            <div class="ImageList--Display--Content">
+              <img class="Image" src="" />
+              <p class="ImageList--Display--Caption"></p>
+            </div>
+          </div>
         </div>
         <div class="Column--Item">
           <ul class="ImageList">
-            <li class="ImageList--Item">
+            <li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai1.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai2.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai3.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai4.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai5.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai6.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai7.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_location1.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_location2.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_location3.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_food1.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_food2.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_food3.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_food4.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_food5.jpg" />
               </div>
-            </li><li class="ImageList--Item">
+            </li><li class="ImageList--Item" data-caption="キャプション">
               <div class="ImageList--Item--Content">
               <img src="./images/image_yamaai_food6.jpg" />
               </div>
@@ -312,5 +317,30 @@
     </main>
   </section>
   <footer class="Footer">Copyright &copy; yamaai. All right reserved.</footer>
+  <script>
+    var imageListDisplayElement = window.document.querySelector('.ImageList--Display img');
+    var imageListCaptionElement = window.document.querySelector('.ImageList--Display--Caption');
+    var imageListItemElements = window.document.querySelectorAll('.ImageList--Item');
+    for (var i = 0; i < imageListItemElements.length; i++) {
+      var imageListItemElement = imageListItemElements[i];
+
+      if (i === 0) {
+        var imageListItemImageElement = imageListItemElement.querySelector('img');
+        var src = imageListItemImageElement.src;
+        var caption = imageListItemElement.dataset.caption;
+        imageListCaptionElement.innerText = caption;
+        imageListDisplayElement.src = src;
+      }
+
+      imageListItemElement.addEventListener('click', function (event) {
+        var el = event.currentTarget;
+        var imageListItemImageElement = el.querySelector('img');
+        var src = imageListItemImageElement.src;
+        var caption = el.dataset.caption;
+        imageListCaptionElement.innerText = caption;
+        imageListDisplayElement.src = src;
+      });
+    }
+  </script>
 </body>
 </html>
