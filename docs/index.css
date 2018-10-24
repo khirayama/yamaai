@@ -210,9 +210,9 @@ html {
 .ImageList .ImageList--Item {
   position: relative;
   display: inline-block;
-  width: calc(100% / 3);
+  width: calc(100% / 4);
   vertical-align: top;
-  padding-top: calc(100% / 3);
+  padding-top: calc(100% / 4);
   cursor: pointer;
 }
 .ImageList .ImageList--Item img {
@@ -221,8 +221,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 4px;
-  border: solid 1px rgba(0, 0, 0, 0.12);
+  padding: 2px;
 }
 /* Diary */
 .Diary {

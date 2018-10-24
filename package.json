@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/khirayama/yamaai/issues"
   },
-  "homepage": "https://github.com/khirayama/yamaai#readme"
+  "homepage": "https://github.com/khirayama/yamaai#readme",
+  "devDependencies": {
+    "@types/node": "10.12.0",
+    "imagemin": "6.0.0",
+    "imagemin-jpegtran": "5.0.2",
+    "imagemin-pngquant": "6.0.0",
+    "imagemin-webp": "4.1.0",
+    "ts-node": "7.0.1",
+    "typescript": "2.9.2"
+  }
 }
