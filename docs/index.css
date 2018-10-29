@@ -89,13 +89,12 @@ html {
 
 /* Application */
 .Application {
-  background-image: url("./images/background.png");
+  /* background: rgba(255, 254, 250, .7); */
 }
 .Application.Application__Post {
   background-image: url("./images/background_post.png");
 }
 .Application--Main {
-  background-color: rgba(255, 255, 255, 0.68);
 }
 .Application.Application__Post .Application--Main {
   background-color: rgba(255, 255, 255, 0.88);
@@ -103,11 +102,39 @@ html {
 
 /* Header */
 .Header {
-  background: #fff;
+}
+.Header--Header {
+  position: relative;
+  padding: 20px;
+}
+.Header--Header span + span{
+  margin-left: 12px;
+}
+.Header--Header--SocialList {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  text-align: right;
+  display: inline-block;
+}
+.Header--Header--SocialList--Item {
+  display: inline-block;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 3px;
+  transition: opacity 200ms ease-out;
+}
+.Header--Header--SocialList--Item:hover {
+  opacity: .64;
+}
+.Header--Header--SocialList--Item + .Header--Header--SocialList--Item {
+  margin-left: 8px;
 }
 .Header--Content {
   position: relative;
-  padding: 84px 12px 0;
+  padding: 88px 12px 0;
   max-width: 768px;
   margin: 0 auto;
 }
@@ -120,43 +147,82 @@ html {
   width: 188px;
   height: 69px;
 }
-.Header--SocialList {
-  position: absolute;
-  top: 16px;
-  right: 12px;
-  text-align: right;
-  display: inline-block;
-}
-.Header--SocialList--Item {
-  display: inline-block;
-  text-align: center;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  background: rgba(0, 0, 0, .56);
-  color: #fff;
-  border-radius: 3px;
-}
-.Header--SocialList--Item + .Header--SocialList--Item {
-  margin-left: 8px;
-}
-/* MainDivider */
-.MainDivider {
+.CoverImage {
   position: relative;
-  padding-top: 10%;
+  top: -24px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 340px;
 }
-.MainDivider img {
+.CoverImage .CoverImage--Main {
+  position: relative;
+  max-width: 768px;
+  z-index: -1;
+}
+.CoverImage .CoverImage--Ill1 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 76px;
+  bottom: -24px;
+  left: calc(50% + 224px);
+}
+.CoverImage .CoverImage--Ill2 {
+  position: absolute;
+  width: 68px;
+  bottom: 104px;
+  right: 144px;
+}
+.CoverImage .CoverImage--Ill3 {
+  position: absolute;
+  width: 88px;
+  bottom: 0;
+  right: 224px;
+}
+.CoverImage .CoverImage--Ill4 {
+  position: absolute;
+  width: 108px;
+  bottom: 64px;
+  left: 124px;
+}
+.CoverImage .CoverImage--Ill5 {
+  position: absolute;
+  width: 68px;
+  bottom: -12px;
+  left: 84px;
 }
 /* Copy */
 .Copy {
-  text-align: center;
+  position: absolute;
+  bottom: -36px;
+  right: -68px;
+  text-align: left;
   padding: 36px 12px 16px;
   font-weight: bold;
   font-size: 1.125rem;
+  max-width: 100%;
+}
+.Copy .CopyImage__1 {
+  width: auto;
+  height: calc(226px * 0.14);
+}
+.Copy .CopyImage__2 {
+  width: auto;
+  height: calc(265px * 0.14);
+}
+.Copy .CopyImage__3 {
+  width: auto;
+  height: calc(284px * 0.14);
+}
+.Copy .CopyImage__4 {
+  width: auto;
+  height: calc(206px * 0.14);
+}
+.Copy .CopyImage__5 {
+  width: auto;
+  height: calc(250px * 0.14);
+}
+.Copy .CopyImage__6 {
+  width: auto;
+  height: calc(192px * 0.14);
 }
 /* Message */
 .Message {
@@ -181,6 +247,10 @@ html {
   font-size: .875rem;
   padding: 12px 0;
   font-weight: bold;
+}
+.Navigation--List--Item img {
+  width: auto;
+  height: 32px;
 }
 /* ContentHeader */
 .ContentHeader {
