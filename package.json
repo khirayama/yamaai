@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build:images": "ts-node bin/minimize-images.ts",
-    "dev": "(cd docs && python -m http.server)"
+    "build:styles": "postcss -c .postcssrc.js 'src/index.css' --base src --dir './docs'",
+    "build:styles:watch": "postcss -c .postcssrc.js -w 'src/index.css' --base src --dir './docs'",
+    "dev": "npm run build:styles:watch & (cd docs && python -m http.server)"
   },
   "repository": {
     "type": "git",
@@ -23,11 +25,19 @@
   "homepage": "https://github.com/khirayama/yamaai#readme",
   "devDependencies": {
     "@types/node": "10.12.0",
+    "autoprefixer": "9.3.1",
     "imagemin": "6.0.0",
     "imagemin-jpegtran": "5.0.2",
     "imagemin-pngquant": "6.0.0",
     "imagemin-webp": "4.1.0",
     "ts-node": "7.0.1",
     "typescript": "2.9.2"
+  },
+  "dependencies": {
+    "cssnano": "4.1.7",
+    "postcss-cli": "6.0.1",
+    "postcss-import": "12.0.1",
+    "postcss-nested": "4.1.0",
+    "postcss-simple-vars": "5.0.1"
   }
 }
