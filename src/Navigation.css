@@ -1,0 +1,19 @@
+.Navigation {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 24px 12px;
+}
+.Navigation--List {
+  display: flex;
+}
+.Navigation--List--Item {
+  flex: 1;
+  text-align: center;
+  font-size: .875rem;
+  padding: 12px 0;
+  font-weight: bold;
+}
+.Navigation--List--Item img {
+  width: auto;
+  height: 32px;
+}

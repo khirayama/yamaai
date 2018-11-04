@@ -1,0 +1,6 @@
+@import 'reset';
+@import 'application';
+
+/* Pages */
+@import 'TopPage';
+@import 'PostPage';

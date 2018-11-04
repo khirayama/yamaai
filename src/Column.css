@@ -1,0 +1,25 @@
+.Column {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+.Column--Item {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 12px;
+  vertical-align: top;
+}
+.Column--Item th {
+  font-weight: bold;
+  min-width: 7rem;
+  text-align: left;
+}
+.Column--Item td {
+  padding: 4px;
+}
+@media screen and (min-width:480px) {
+  .Column--Item {
+    width: calc(50% - 3px);
+  }
+}

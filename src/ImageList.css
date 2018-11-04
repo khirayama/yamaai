@@ -1,0 +1,44 @@
+.ImageList--Display {
+  position: relative;
+  padding-top: calc(75% + 2rem);
+}
+.ImageList--Display--Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ImageList {
+  .Image {
+    padding: 4px;
+    border: solid 1px rgba(0, 0, 0, 0.12);
+  }
+}
+.ImageList .ImageList--Item {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / 4);
+  padding-top: calc(100% / 4);
+  cursor: pointer;
+  overflow: hidden;
+  vertical-align: top;
+}
+.ImageList .ImageList--Item--Content {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: inline-block;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  padding: 2px;
+  vertical-align: top;
+  overflow: hidden;
+}
+.ImageList .ImageList--Item img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .16);
+}

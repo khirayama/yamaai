@@ -1,0 +1,10 @@
+.ContentHeader {
+  width: 100%;
+  text-align: center;
+  padding: 48px 12px 28px;
+
+  img {
+    width: auto;
+    height: calc(279px * 0.14);
+  }
+}

@@ -1,0 +1,57 @@
+.CoverImage {
+  position: relative;
+  top: -24px;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    /* filter: saturate(100%); */
+  }
+
+  .CoverImage--Main {
+    position: relative;
+    z-index: -1;
+    max-width: 768px;
+    background: rgba(0, 0, 0, .08);
+  }
+
+  .CoverImage--Ill1 {
+    position: absolute;
+    width: 76px;
+    bottom: -8%;
+    right: 24%;
+    filter: contrast(100%) brightness(0%);
+  }
+
+  .CoverImage--Ill2 {
+    position: absolute;
+    width: 68px;
+    bottom: 32%;
+    right: 4%;
+    filter: contrast(100%) brightness(0%);
+  }
+
+  .CoverImage--Ill3 {
+    position: absolute;
+    width: 88px;
+    bottom: 0;
+    right: 10%;
+    filter: contrast(100%) brightness(0%);
+  }
+
+  .CoverImage--Ill4 {
+    position: absolute;
+    width: 108px;
+    bottom: 12%;
+    left: 4%;
+    filter: contrast(100%) brightness(0%);
+  }
+
+  .CoverImage--Ill5 {
+    position: absolute;
+    width: 68px;
+    bottom: -4%;
+    left: 2%;
+    filter: contrast(100%) brightness(0%);
+  }
+}

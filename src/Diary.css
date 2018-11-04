@@ -1,0 +1,18 @@
+.Diary {
+  & > a {
+    display: inline-block;
+    width: 100%;
+    padding: 32px 0 12px;
+    text-align: center;
+  }
+
+  & > a > img {
+    width: auto;
+    height: calc(368px * 0.14);
+  }
+
+  & > ul + a {
+    text-align: right;
+    padding: 16px;
+  }
+}

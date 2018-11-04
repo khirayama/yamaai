@@ -1,0 +1,10 @@
+.PostContent {
+  max-width: 568px;
+  margin: 0 auto;
+  padding: 8px 12px 68px;
+}
+.PostContent h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 68px 0 48px;
+}
