@@ -4,17 +4,15 @@ import * as fs from 'fs';
 import * as imagemin from 'imagemin';
 import * as imageminJpegtran from 'imagemin-jpegtran';
 import * as imageminPngquant from 'imagemin-pngquant';
-import * as imageminWebp from 'imagemin-webp';
 
 const ROOT_DIR: string = './materials/images';
-const DIST_DIR: string = './docs/images';
+const DIST_DIR: string = './docs/pages/images';
 
 function isTarget(filePath: string): boolean {
   return (
     filePath.endsWith('.png') ||
     filePath.endsWith('.jpg') ||
     filePath.endsWith('.jpeg') ||
-    // filePath.endsWith('.webp') ||
     filePath.endsWith('svg')
   );
 }
@@ -42,14 +40,6 @@ function compressImage(filePath: string): void {
       }),
     ],
   });
-  // imagemin([filePath], dist, {
-  //   plugins: [
-  //     imageminWebp({
-  //       quality: '60-70',
-  //       lossless: true,
-  //     }),
-  //   ],
-  // });
 }
 
 function compressImages(rootPath: string): void {

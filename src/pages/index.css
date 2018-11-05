@@ -1,0 +1,77 @@
+@import 'application/reset';
+@import 'application/index';
+@import 'components/Header';
+@import 'components/CoverImage';
+@import 'components/Navigation';
+@import 'components/Copy';
+@import 'components/Diary';
+@import 'components/PostList';
+@import 'components/ContentHeader';
+@import 'components/ImageList';
+@import 'components/Footer';
+@import 'components/Button';
+@import 'components/Note';
+@import 'components/Column';
+
+.TopPage {
+  .TopPage--Map {
+    padding: 12px;
+
+    .TopPage--Map--Container {
+      width: 100%;
+      height: 320px;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .TopPage--Map--ButtonContainer {
+      text-align: center;
+    }
+
+    .TopPage--Map--Table {
+      border-collapse: collapse;
+
+      th {
+        border: solid 1px rgba(0, 0, 0, .72);
+        padding: 12px;
+        min-width: 120px;
+      }
+
+      td {
+        border: solid 1px rgba(0, 0, 0, .72);
+        padding: 12px;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .TopPage--ReservationBox {
+    padding: 12px;
+
+    .TopPage--ReservationBox--Text {
+      border: solid 1px rgba(0, 0, 0, .72);
+      padding: 12px;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .TopPage--Name {
+    text-align: right;
+    padding: 12px 0;
+    font-weight: bold;
+  }
+  .TopPage--InfoBox {
+    a {
+      text-decoration: underline;
+    }
+  }
+}

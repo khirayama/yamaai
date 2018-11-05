@@ -1,0 +1,33 @@
+@import 'application/reset';
+@import 'application/index';
+@import 'components/Header';
+@import 'components/CoverImage';
+@import 'components/Navigation';
+@import 'components/Copy';
+@import 'components/Diary';
+@import 'components/PostList';
+@import 'components/ContentHeader';
+@import 'components/ImageList';
+@import 'components/Footer';
+@import 'components/Button';
+@import 'components/Note';
+@import 'components/Column';
+
+.PostsPage {
+  background-image: url("./images/background_post.png");
+
+  .PostsPage--Main {
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .TopPage--Name {
+    text-align: right;
+    padding: 12px 0;
+    font-weight: bold;
+  }
+  .TopPage--InfoBox {
+    a {
+      text-decoration: underline;
+    }
+  }
+}

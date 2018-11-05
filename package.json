@@ -1,43 +1,43 @@
 {
-  "name": "yamaai",
+  "name": "tumblr",
   "version": "1.0.0",
-  "description": "Ref: https://yamaai.jimdofree.com/ Ref: https://yamabiyori.tumblr.com/",
+  "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
+    "include:markups": "html-includes --src src --dest tmp --minify",
+    "include:markups:watch": "html-includes --src src --dest tmp --minify --watch",
+    "compile:markups:tumblr": "npm run compile:markups:tumblr:index && npm run compile:markups:tumblr:posts && npm run compile:markups:tumblr:post",
+    "compile:markups:tumblr:index": "tumblr-theme-parser -d src/data/index.json < tmp/pages/index.html > docs/pages/index.html",
+    "compile:markups:tumblr:posts": "tumblr-theme-parser -d src/data/index.json < tmp/pages/posts.html > docs/pages/posts.html",
+    "compile:markups:tumblr:post": "tumblr-theme-parser -d src/data/index.json < tmp/pages/post.html > docs/pages/post.html",
+    "compile:markups": "npm run include:markups && npm run compile:markups:tumblr",
     "build:images": "ts-node bin/minimize-images.ts",
-    "build:styles": "postcss -c .postcssrc.js 'src/index.css' --base src --dir './docs'",
-    "build:styles:watch": "postcss -c .postcssrc.js -w 'src/index.css' --base src --dir './docs'",
-    "dev": "npm run build:styles:watch & (cd docs && python -m http.server)"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/khirayama/yamaai.git"
+    "build:styles": "postcss -c .postcssrc.js 'src/pages/*.css' --base src --dir './docs'",
+    "build:styles:watch": "postcss -c .postcssrc.js -w 'src/pages/*.css' --base src --dir './docs'",
+    "server": "(cd docs/pages && python -m http.server)",
+    "dev": "concurrently \"npm run build:styles:watch\" \"nodemon --watch 'src/*' --exec 'npm run compile:markups'\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/khirayama/yamaai/issues"
-  },
-  "homepage": "https://github.com/khirayama/yamaai#readme",
   "devDependencies": {
-    "@types/node": "10.12.0",
+    "@types/node": "10.12.2",
     "autoprefixer": "9.3.1",
-    "imagemin": "6.0.0",
-    "imagemin-jpegtran": "5.0.2",
-    "imagemin-pngquant": "6.0.0",
-    "imagemin-webp": "4.1.0",
-    "ts-node": "7.0.1",
-    "typescript": "2.9.2"
-  },
-  "dependencies": {
     "cssnano": "4.1.7",
+    "html-includes": "4.0.0",
+    "imagemin": "6.0.0",
+    "imagemin-jpegtran": "6.0.0",
+    "imagemin-pngquant": "6.0.0",
+    "nodemon": "1.18.6",
     "postcss-cli": "6.0.1",
     "postcss-import": "12.0.1",
     "postcss-nested": "4.1.0",
-    "postcss-simple-vars": "5.0.1"
+    "postcss-simple-vars": "5.0.1",
+    "ts-node": "7.0.1",
+    "tumblr-theme-parser": "1.0.0",
+    "typescript": "2.9.2"
+  },
+  "dependencies": {
+    "concurrently": "^4.0.1"
   }
 }
