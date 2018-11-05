@@ -1,4 +1,7 @@
 .Header {
+  position: relative;
+  z-index: 1;
+
   .Header--Header {
     position: relative;
     padding: 20px;

@@ -1,19 +1,8 @@
-.PostPage {
+.PostsPage {
   background-image: url("./images/background_post.png");
 
-  .PostPage--Main {
+  .PostsPage--Main {
     background: rgba(255, 255, 255, 0.88);
-  }
-
-  .PostContent {
-    max-width: 568px;
-    margin: 0 auto;
-    padding: 48px 12px;
-
-    h1 {
-      font-weight: bold;
-      padding: 12px 0;
-    }
   }
 
   .TopPage--Name {
