@@ -1,44 +1,26 @@
 @import 'application/reset';
 @import 'application/index';
-@import 'components/Header';
-@import 'components/CoverImage';
-@import 'components/Navigation';
-@import 'components/Copy';
-@import 'components/Diary';
-@import 'components/PostList';
-@import 'components/ContentHeader';
-@import 'components/ImageList';
-@import 'components/Footer';
-@import 'components/Button';
-@import 'components/Note';
-@import 'components/Column';
+@import 'components/_Header';
+@import 'components/_Navigation';
+@import 'components/_Sign';
+@import 'components/_Footer';
+@import 'components/_ImageHeading';
 
 .PostPage {
   background-image: url("./images/background_post.png");
 
   .PostPage--Main {
     background: rgba(255, 255, 255, 0.88);
-  }
 
-  .PostContent {
-    max-width: 568px;
-    margin: 0 auto;
-    padding: 48px 12px;
+    .PostPage--Main--Content {
+      max-width: 568px;
+      margin: 0 auto;
+      padding: 48px 12px;
 
-    h1 {
-      font-weight: bold;
-      padding: 12px 0;
-    }
-  }
-
-  .TopPage--Name {
-    text-align: right;
-    padding: 12px 0;
-    font-weight: bold;
-  }
-  .TopPage--InfoBox {
-    a {
-      text-decoration: underline;
+      h1 {
+        font-weight: bold;
+        padding: 12px 0;
+      }
     }
   }
 }

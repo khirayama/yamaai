@@ -24,46 +24,16 @@
 <body>
   <section class="PostPage">
     <main class="PostPage--Main">
-      <header class="Header">
-        <div class="Header--Header">
-          <!-- <span>&#38;#12306; 819&#45;1155 福岡県糸島市川付570</span> -->
-          <!-- <span>&#38;#9742; 05013133063</span> -->
-          <ul class="Header--Header--SocialList">
-            <li class="Header--Header--SocialList--Item">
-              <a href="https://www.facebook.com/yamatokurashitotabemono/"><img src="./images/icon_facebook.png" alt="facebook" /></a>
-            </li>
-            <li class="Header--Header--SocialList--Item">
-              <a href="https://www.instagram.com/yamaai_c/"><img src="./images/icon_instagram.png" alt="instagram" /></a>
-            </li>
-          </ul>
-        </div>
-        <div class="Header--Content">
-          <h1 class="Header--Content--Heading">
-            <a href="/">
-              <img src="./images/logo.png" alt="yamaai" />
-            </a>
-          </h1>
-        </div>
-      </header>
+      ${require('../components/_Header.html')}
+      ${require('../components/_Navigation.html')}
 
-      <div class="CoverImage">
-        <img class="CoverImage--Main" src="./images/cover.jpg" alt="yamaai" />
-        <img class="CoverImage--Ill1" src="./images/illustration1.png" alt="yamaai" />
-        <img class="CoverImage--Ill2" src="./images/illustration2.png" alt="yamaai" />
-        <img class="CoverImage--Ill3" src="./images/illustration3.png" alt="yamaai" />
-        <img class="CoverImage--Ill4" src="./images/illustration4.png" alt="yamaai" />
-        <img class="CoverImage--Ill5" src="./images/illustration5.png" alt="yamaai" />
-      </div>
+      <h2 class="ImageHeading">
+        <a href="./posts.html">
+          <img src="./images/img_nav_diary.png" alt="山と暮らしと食べものの記録" />
+        </a>
+      </h2>
 
-      <nav class="Navigation">
-        <ul class="Navigation--List">
-          <li class="Navigation--List--Item"><a href="#about"><img src="./images/img_nav_about.png" alt="宿泊・料金" /></a></li>
-          <li class="Navigation--List--Item"><a href="#access"><img src="./images/img_nav_map.png" alt="地図" /></a></li>
-          <li class="Navigation--List--Item"><a href="#reservation"><img src="./images/img_nav_reservation.png" alt="予約" /></a></li>
-        </ul>
-      </nav>
-
-      <section class="PostContent">
+      <section class="PostPage--Main--Content">
         <h1>1．樹木希林さんのこと</h1>
         <div>
           うちにはテレビがありませんが、映画はよく観ます。映画館にいったり、パソコンで買った映画を壁に映して家でも観ます。この前、実家にいるとき、NHKスペシャルで「樹木希林を生きる」をみました。キクヨばあちゃんとぺぺと並んでみました。樹木希林さんのいってた言葉で、これから納得しながら生きてく選択をするのに、ヒントになると思って心に書き留めたものを紹介します。<br>
@@ -76,30 +46,9 @@
         </div>
       </section>
 
-      <div class="Column">
-        <div class="Column--Item">
-          <div class="TopPage--Name">
-            <p>yamaai - 山合 -</p>
-          </div>
-        </div>
-        <div class="Column--Item">
-          <div class="TopPage--InfoBox">
-            <p>&#12306; 819-1155</p>
-            <p>福岡県糸島市川付570</p>
-            <p>
-              <a href="tel:05013133063">050-1313-3063</a>
-              （金から月 10:00 - 16:00）
-            </p>
-            <p>
-              おやすみなどのお知らせは
-              <a href="./posts.html">山と暮らしと食べものの記録</a>
-              から
-            </p>
-          </div>
-        </div>
-      </div>
+      ${require('../components/_Sign.html')}
+      ${require('../components/_Footer.html')}
     </main>
   </section>
-  <footer class="Footer">Copyright &copy; yamaai. All right reserved.</footer>
 </body>
 </html>

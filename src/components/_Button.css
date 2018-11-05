@@ -9,6 +9,6 @@
   transition: opacity 200ms ease-out;
 
   &:hover {
-    opacity: .64;
+    opacity: $opacity;
   }
 }

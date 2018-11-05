@@ -1,0 +1,70 @@
+@import 'application/vars';
+
+.Header {
+  .Header--SubHeader {
+    text-align: right;
+    padding: 12px;
+
+    .Header--SubHeader--SocialList {
+      text-align: right;
+      display: inline-block;
+
+      .Header--SubHeader--SocialList--Item {
+        display: inline-block;
+        text-align: center;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 3px;
+        transition: opacity 200ms ease-out;
+
+        img {
+          filter: contrast(100%) brightness(0%);
+        }
+
+        &:hover {
+          opacity: $opacity;
+        }
+
+        & + .Header--SubHeader--SocialList--Item {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .Header--Content {
+    position: relative;
+    padding: 88px 12px 0;
+    max-width: 768px;
+    margin: 0 auto;
+
+    .Header--Content--Heading {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+
+      img {
+        position: relative;
+        width: 188px;
+        height: 69px;
+        z-index: 1;
+      }
+    }
+
+    .Header--Content--Image {
+      display: flex;
+      position: relative;
+      max-width: 768px;
+      width: auto;
+      min-height: 320px;
+      justify-content: center;
+      align-items: center;
+      top: -24px;
+
+      img {
+        background: rgba(0, 0, 0, .08);
+      }
+    }
+  }
+}

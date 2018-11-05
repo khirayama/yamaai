@@ -10,12 +10,12 @@
     "compile:markups:tumblr:index": "tumblr-theme-parser -d src/data/index.json < tmp/pages/index.html > docs/pages/index.html",
     "compile:markups:tumblr:posts": "tumblr-theme-parser -d src/data/index.json < tmp/pages/posts.html > docs/pages/posts.html",
     "compile:markups:tumblr:post": "tumblr-theme-parser -d src/data/index.json < tmp/pages/post.html > docs/pages/post.html",
-    "compile:markups": "npm run include:markups && npm run compile:markups:tumblr",
+    "compile:markups": "npm run include:markups:watch & npm run compile:markups:tumblr",
     "build:images": "ts-node bin/minimize-images.ts",
     "build:styles": "postcss -c .postcssrc.js 'src/pages/*.css' --base src --dir './docs'",
     "build:styles:watch": "postcss -c .postcssrc.js -w 'src/pages/*.css' --base src --dir './docs'",
     "server": "(cd docs/pages && python -m http.server)",
-    "dev": "concurrently \"npm run build:styles:watch\" \"nodemon --watch 'src/*' --exec 'npm run compile:markups'\" \"npm run server\""
+    "dev": "concurrently 'npm run build:styles:watch' 'npm run include:markups:watch'  \"nodemon -e html --watch 'tmp/**/*' --exec 'npm run compile:markups:tumblr'\" 'npm run server'"
   },
   "keywords": [],
   "author": "",

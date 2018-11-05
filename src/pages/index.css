@@ -1,77 +1,118 @@
 @import 'application/reset';
 @import 'application/index';
-@import 'components/Header';
-@import 'components/CoverImage';
-@import 'components/Navigation';
-@import 'components/Copy';
-@import 'components/Diary';
-@import 'components/PostList';
-@import 'components/ContentHeader';
-@import 'components/ImageList';
-@import 'components/Footer';
-@import 'components/Button';
-@import 'components/Note';
-@import 'components/Column';
+@import 'components/_Header';
+@import 'components/_Navigation';
+@import 'components/_Sign';
+@import 'components/_Footer';
+@import 'components/_ImageHeading';
+@import 'components/_Column';
+@import 'components/_Button';
+@import 'components/_ImageList';
+@import 'components/_PostList';
 
 .TopPage {
-  .TopPage--Map {
-    padding: 12px;
-
-    .TopPage--Map--Container {
-      width: 100%;
-      height: 320px;
-
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .TopPage--Map--ButtonContainer {
+  .TopPage--Main {
+    .TopPage--Main--CoverImage {
+      position: relative;
+      margin: 0 auto;
       text-align: center;
+
+      .TopPage--Main--CoverImage--Ill1,
+      .TopPage--Main--CoverImage--Ill2,
+      .TopPage--Main--CoverImage--Ill3,
+      .TopPage--Main--CoverImage--Ill4,
+      .TopPage--Main--CoverImage--Ill5 {
+        filter: contrast(100%) brightness(0%);
+        position: absolute;
+        z-index: 1;
+      }
+
+      $base: 24px;
+
+      .TopPage--Main--CoverImage--Ill1 {
+        width: 76px;
+        bottom: calc(-8% + $base);
+        right: 24%;
+      }
+
+      .TopPage--Main--CoverImage--Ill2 {
+        width: 68px;
+        bottom: calc(32% + $base);
+        right: 4%;
+      }
+
+      .TopPage--Main--CoverImage--Ill3 {
+        width: 88px;
+        bottom: calc(0 + $base);
+        right: 10%;
+      }
+
+      .TopPage--Main--CoverImage--Ill4 {
+        width: 108px;
+        bottom: calc(12% + $base);
+        left: 4%;
+      }
+
+      .TopPage--Main--CoverImage--Ill5 {
+        width: 68px;
+        bottom: calc(-4% + $base);
+        left: 2%;
+      }
     }
 
-    .TopPage--Map--Table {
-      border-collapse: collapse;
-
-      th {
-        border: solid 1px rgba(0, 0, 0, .72);
-        padding: 12px;
-        min-width: 120px;
-      }
-
-      td {
-        border: solid 1px rgba(0, 0, 0, .72);
-        padding: 12px;
-      }
-
-      a {
-        text-decoration: underline;
-      }
+    .TopPage--Main--Copy {
+      text-align: center;
+      padding: 36px 0;
     }
-  }
 
-  .TopPage--ReservationBox {
-    padding: 12px;
-
-    .TopPage--ReservationBox--Text {
-      border: solid 1px rgba(0, 0, 0, .72);
+    .TopPage--Main--Map {
       padding: 12px;
 
-      a {
-        text-decoration: underline;
+      .TopPage--Main--Map--Container {
+        width: 100%;
+        height: 320px;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .TopPage--Main--Map--ButtonContainer {
+        text-align: center;
+      }
+
+      .TopPage--Main--Map--Table {
+        border-collapse: collapse;
+
+        th {
+          border: solid 1px rgba(0, 0, 0, .72);
+          padding: 12px;
+          min-width: 120px;
+        }
+
+        td {
+          border: solid 1px rgba(0, 0, 0, .72);
+          padding: 12px;
+        }
+
+        a {
+          text-decoration: underline;
+        }
       }
     }
-  }
 
-  .TopPage--Name {
-    text-align: right;
-    padding: 12px 0;
-    font-weight: bold;
-  }
-  .TopPage--InfoBox {
-    a {
-      text-decoration: underline;
+    .TopPage--Main--ReservationBox {
+      padding: 12px;
+
+      .TopPage--Main--ReservationBox--Text {
+        border: solid 1px rgba(0, 0, 0, .72);
+        padding: 12px;
+
+        a {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
