@@ -14,7 +14,7 @@ function isTarget(filePath: string): boolean {
     filePath.endsWith('.png') ||
     filePath.endsWith('.jpg') ||
     filePath.endsWith('.jpeg') ||
-    filePath.endsWith('.webp') ||
+    // filePath.endsWith('.webp') ||
     filePath.endsWith('svg')
   );
 }
@@ -42,14 +42,14 @@ function compressImage(filePath: string): void {
       }),
     ],
   });
-  imagemin([filePath], dist, {
-    plugins: [
-      imageminWebp({
-        quality: '60-70',
-        lossless: true,
-      }),
-    ],
-  });
+  // imagemin([filePath], dist, {
+  //   plugins: [
+  //     imageminWebp({
+  //       quality: '60-70',
+  //       lossless: true,
+  //     }),
+  //   ],
+  // });
 }
 
 function compressImages(rootPath: string): void {
