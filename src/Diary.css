@@ -15,4 +15,21 @@
     text-align: right;
     padding: 16px;
   }
+
+  .PostList--Item {
+    max-height: 280px;
+
+    .PostList--Item--Date {
+      padding: 0 0 12px;
+      color: rgba(0, 0, 0, .44);
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .Diary--More {
+    text-align: right;
+    max-width: 768px;
+    margin: 0 auto;
+  }
 }

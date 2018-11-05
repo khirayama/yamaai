@@ -1,33 +1,40 @@
 .Copy {
   text-align: center;
-  padding: 36px 12px;
-}
-.Copy .Copy--Content {
-  display: inline-block;
-  text-align: left;
-  margin: 0 auto;
-}
-.Copy .Copy--Content .Copy--Content--CopyImage__1 {
-  width: auto;
-  height: calc(226px * 0.14);
-}
-.Copy .Copy--Content .Copy--Content--CopyImage__2 {
-  width: auto;
-  height: calc(265px * 0.14);
-}
-.Copy .Copy--Content .Copy--Content--CopyImage__3 {
-  width: auto;
-  height: calc(284px * 0.14);
-}
-.Copy .Copy--Content .Copy--Content--CopyImage__4 {
-  width: auto;
-  height: calc(206px * 0.14);
-}
-.Copy .Copy--Content .Copy--Content--CopyImage__5 {
-  width: auto;
-  height: calc(250px * 0.14);
-}
-.Copy .Copy--Content .Copy--Content--CopyImage__6 {
-  width: auto;
-  height: calc(192px * 0.14);
+  padding: 48px 12px;
+
+  .Copy--Content {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+
+    .Copy--Content--CopyImage__1 {
+      width: auto;
+      height: calc(226px * 0.14);
+    }
+
+    .Copy--Content--CopyImage__2 {
+      width: auto;
+      height: calc(265px * 0.14);
+    }
+
+    .Copy--Content--CopyImage__3 {
+      width: auto;
+      height: calc(284px * 0.14);
+    }
+
+    .Copy--Content--CopyImage__4 {
+      width: auto;
+      height: calc(206px * 0.14);
+    }
+
+    .Copy--Content--CopyImage__5 {
+      width: auto;
+      height: calc(250px * 0.14);
+    }
+
+    .Copy--Content--CopyImage__6 {
+      width: auto;
+      height: calc(192px * 0.14);
+    }
+  }
 }
