@@ -31,12 +31,11 @@
 </head>
 <body>
   {block:IndexPage}
+    {block:TagPage}
+    ${require('../contents/search.html')}
+    {/block:TagPage}
   ${require('../contents/index.html')}
   {/block:IndexPage}
-
-  {block:SearchPage}
-  ${require('../contents/search.html')}
-  {/block:SearchPage}
 
   {block:PermalinkPage}
   ${require('../contents/permalink.html')}

@@ -115,4 +115,18 @@
       }
     }
   }
+
+  .PostList .PostList--Item {
+    display: none;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      display: inline-block;
+    }
+  }
+}
+
+.PostsPage + .TopPage {
+  display: none;
 }
