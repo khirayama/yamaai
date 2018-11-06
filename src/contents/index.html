@@ -31,7 +31,7 @@
         {block:Posts}
           {block:Text}
             <li class="PostList--Item">
-              <a href="./post.html">
+              <a href="{Permalink}">
                 {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
                 <div class="PostList--Item--Content">
                   <div class="PostList--Item--Content--Title">{Title}</div>
@@ -43,7 +43,7 @@
           {/block:Text}
           {block:Photo}
             <li class="PostList--Item">
-              <a href="./post.html">
+              <a href="{Permalink}">
                 {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
                 <div class="PostList--Item--Content">
                   <div class="PostList--Item--Content--Image">
