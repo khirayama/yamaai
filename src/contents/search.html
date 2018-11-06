@@ -1,0 +1,49 @@
+<section class="PostsPage">
+  <main class="PostsPage--Main">
+    ${require('../components/Header.html')}
+    ${require('../components/Navigation.html')}
+
+    <h2 class="ImageHeading">
+      <a href="/search">
+        <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_diary.png" alt="山と暮らしと食べものの記録" />
+      </a>
+    </h2>
+
+    <ul class="PostList">
+      {block:Posts}
+        {block:Text}
+          <li class="PostList--Item">
+            <a href="./post.html">
+              {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
+              <div class="PostList--Item--Content">
+                <div class="PostList--Item--Content--Title">{Title}</div>
+                <div class="PostList--Item--Content--Body">{Body}</div>
+              </div>
+              {block:More}<div class="PostList--Item--More">続きを読む</div>{/block:More}
+            </a>
+          </li>
+        {/block:Text}
+        {block:Photo}
+          <li class="PostList--Item">
+            <a href="./post.html">
+              {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
+              <div class="PostList--Item--Content">
+                <div class="PostList--Item--Content--Image">
+                  <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                </div>
+                <div class="PostList--Item--Content">{Caption}</div>
+
+              </div>
+            </a>
+          </li>
+        {/block:Photo}
+      {/block:Posts}
+    </ul>
+    <div class="PostList--More">
+      <a href="/search">もっと →</a>
+    </div>
+
+    ${require('../components/Sign.html')}
+    ${require('../components/Footer.html')}
+  </main>
+</section>

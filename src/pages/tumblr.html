@@ -8,7 +8,6 @@
   <meta name="theme-color" content="#fbfaf5"/>
 
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="/index.css">
   <meta name="mobile-web-app-capable" content="yes">
 
   <meta name="apple-mobile-web-app-title" content="yamaai">
@@ -18,10 +17,29 @@
   <link rel="apple-touch-startup-image" href="./images/logo/icon_ios.png">
 
   <link rel="icon" sizes="192x192" type="image/png" href="./images/logo/favicon.png">
+  {block:IndexPage}
+    <link rel="stylesheet" href="https://khirayama.github.io/yamaai/pages/index.css">
+  {/block:IndexPage}
+  {block:SearchPage}
+    <link rel="stylesheet" href="https://khirayama.github.io/yamaai/pages/search.css">
+  {/block:SearchPage}
+  {block:PermalinkPage}
+    <link rel="stylesheet" href="https://khirayama.github.io/yamaai/pages/permalink.css">
+  {/block:PermalinkPage}
 
   <title>yamaai | 福岡県糸島の宿</title>
 </head>
 <body>
+  {block:IndexPage}
   ${require('../contents/index.html')}
+  {/block:IndexPage}
+
+  {block:SearchPage}
+  ${require('../contents/search.html')}
+  {/block:SearchPage}
+
+  {block:PermalinkPage}
+  ${require('../contents/permalink.html')}
+  {/block:PermalinkPage}
 </body>
 </html>

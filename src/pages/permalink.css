@@ -1,0 +1,26 @@
+@import 'application/reset';
+@import 'application/index';
+@import 'components/Header';
+@import 'components/Navigation';
+@import 'components/Sign';
+@import 'components/Footer';
+@import 'components/ImageHeading';
+
+.PostPage {
+  background-image: url("https://khirayama.github.io/yamaai/pages/images/background_post.png");
+
+  .PostPage--Main {
+    background: rgba(255, 255, 255, 0.88);
+
+    .PostPage--Main--Content {
+      max-width: 568px;
+      margin: 0 auto;
+      padding: 48px 12px;
+
+      h1 {
+        font-weight: bold;
+        padding: 12px 0;
+      }
+    }
+  }
+}

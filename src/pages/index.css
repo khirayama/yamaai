@@ -1,14 +1,14 @@
 @import 'application/reset';
 @import 'application/index';
-@import 'components/_Header';
-@import 'components/_Navigation';
-@import 'components/_Sign';
-@import 'components/_Footer';
-@import 'components/_ImageHeading';
-@import 'components/_Column';
-@import 'components/_Button';
-@import 'components/_ImageList';
-@import 'components/_PostList';
+@import 'components/Header';
+@import 'components/Navigation';
+@import 'components/Sign';
+@import 'components/Footer';
+@import 'components/ImageHeading';
+@import 'components/Column';
+@import 'components/Button';
+@import 'components/ImageList';
+@import 'components/PostList';
 
 .TopPage {
   .TopPage--Main {
