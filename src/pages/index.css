@@ -11,6 +11,8 @@
 @import 'components/PostList';
 
 .TopPage {
+  background: #fbfbf9;
+
   .TopPage--Main {
     .TopPage--Main--CoverImage {
       position: relative;
