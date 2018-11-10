@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf docs tmp && mkdir -p tmp/1 tmp/2 tmp/result docs/pages",
     "include:markups": "npm run include:markups1 && npm run include:markups2 && npm run include:markups3",
     "include:markups1": "html-includes --src src --dest tmp/1 --minify",
     "include:markups2": "html-includes --src tmp/1 --dest tmp/2 --minify",
@@ -22,7 +21,7 @@
     "build:styles": "postcss -c .postcssrc.js 'src/pages/*.css' --base src --dir './docs'",
     "build:styles:watch": "postcss -c .postcssrc.js -w 'src/pages/*.css' --base src --dir './docs'",
     "server": "(cd docs/pages && python -m http.server)",
-    "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run include:markups:watch'  \"nodemon -e html --watch 'tmp/**/*' --exec 'npm run compile:markups:tumblr'\" 'npm run server'"
+    "dev": "concurrently 'npm run build:styles:watch' 'npm run include:markups:watch'  \"nodemon -e html --watch 'tmp/**/*' --exec 'npm run compile:markups:tumblr'\" 'npm run server'"
   },
   "keywords": [],
   "author": "",
