@@ -1,24 +1,23 @@
 <section class="PostPage">
   <main class="PostPage--Main">
-    ${require('../components/Header.html')}
-    ${require('../components/Navigation.html')}
-
     <h2 class="ImageHeading">
-      <a href="/search">
+      <a href="/tagged/yamaai">
         <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_diary.png" alt="山と暮らしと食べものの記録" />
       </a>
     </h2>
 
+    ${require('../components/Navigation.html')}
+
     <section class="PostPage--Main--Content">
       {block:Posts}
         {block:Text}
+          {block:Date}<div class="PostPage--Main--Content--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
           <h1>{Title}</h1>
-          {block:Date}<div>{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
           <div>{Body}</div>
         {/block:Text}
         {block:Photo}
+          {block:Date}<div class="PostPage--Main--Content--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
           <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-          {block:Date}<div>{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
           <div>{Caption}</div>
         {/block:Photo}
       {/block:Posts}

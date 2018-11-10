@@ -17,9 +17,20 @@
       margin: 0 auto;
       padding: 48px 12px;
 
+      .PostPage--Main--Content--Date {
+        padding: 0 0 12px;
+        color: rgba(0, 0, 0, .44);
+        font-weight: bold;
+        text-align: center;
+      }
+
       h1 {
         font-weight: bold;
         padding: 12px 0;
+      }
+
+      img {
+        margin: 16px 0 24px;
       }
     }
   }
