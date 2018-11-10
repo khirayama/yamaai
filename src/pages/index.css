@@ -69,8 +69,8 @@
       .TopPage--Main--Copy--Image {
         filter: contrast(100%) brightness(0%);
         width: auto;
-        height: calc(279px * 0.14);
-        margin-bottom: 24px;
+        height: calc(189px * 0.14);
+        margin-top: 24px;
       }
     }
 
