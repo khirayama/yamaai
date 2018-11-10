@@ -1,6 +1,7 @@
 @import 'components/Column';
 
 .Sign {
+  padding: 12px;
 
   .Sign--InfoBox {
     text-align: right;
