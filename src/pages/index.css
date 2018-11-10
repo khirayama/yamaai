@@ -64,7 +64,14 @@
 
     .TopPage--Main--Copy {
       text-align: center;
-      padding: 36px 0;
+      padding: 48px 0;
+
+      .TopPage--Main--Copy--Image {
+        filter: contrast(100%) brightness(0%);
+        width: auto;
+        height: calc(279px * 0.14);
+        margin-bottom: 24px;
+      }
     }
 
     .TopPage--Main--Map {
