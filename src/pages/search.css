@@ -12,5 +12,25 @@
 
   .PostsPage--Main {
     background: rgba(255, 255, 255, 0.88);
+
+    .PostsPage--Main--Pagination {
+      display: flex;
+      max-width: 768px;
+      margin: 0 auto;
+
+      .PostsPage--Main--Pagination--Previous,
+      .PostsPage--Main--Pagination--Next {
+        font-weight: bold;
+        flex: 1;
+      }
+
+      .PostsPage--Main--Pagination--Previous {
+        text-align: left;
+      }
+
+      .PostsPage--Main--Pagination--Next {
+        text-align: right;
+      }
+    }
   }
 }

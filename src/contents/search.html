@@ -1,7 +1,6 @@
 <section class="PostsPage">
   <main class="PostsPage--Main">
-    <h2 class="ImageHeading">
-      <a href="/tagged/yamaai">
+    <h2 class="ImageHeading"> <a href="/tagged/yamaai">
         <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_diary.png" alt="山と暮らしと食べものの記録" />
       </a>
     </h2>
@@ -37,8 +36,20 @@
         {/block:Photo}
       {/block:Posts}
     </ul>
-    <div class="PostList--More">
-      <a href="/tagged/yamaai">もっと →</a>
+
+    <div class="PostsPage--Main--Pagination">
+      {block:Pagination}
+        {block:PreviousPage}
+          <div class="PostsPage--Main--Pagination--Previous">
+            <a href="{PreviousPage}">前のページ</a>
+          </div>
+        {/block:PreviousPage}
+        {block:NextPage}
+          <div class="PostsPage--Main--Pagination--Next">
+            <a href="{NextPage}">次のページ</a>
+          </div>
+        {/block:NextPage}
+      {/block:Pagination}
     </div>
 
     ${require('../components/Sign.html')}

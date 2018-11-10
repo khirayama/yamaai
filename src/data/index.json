@@ -98,5 +98,8 @@
       "PostType": "text",
       "Title": "2．布草履大作戦（１）"
     }
-  ]
+  ],
+  "block:Pagination": true,
+  "block:PreviousPage": true,
+  "block:NextPage": true
 }
