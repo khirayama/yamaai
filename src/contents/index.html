@@ -20,52 +20,25 @@
       刻々と変わる、山の空気、山の生きものたちに<br>
       囲まれた営みの中で<br>
       それぞれの心地のいい時間をお過ごしください。<br>
-      <img class="TopPage--Main--Copy--Image" src="https://khirayama.github.io/yamaai/pages/images/copy.png" alt="山と暮らしと出合う" />
     </p>
 
-    <h2 class="ImageHeading">
-      <a href="/tagged/yamaai">
-        <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_diary.png" alt="山と暮らしと食べものの記録" />
-      </a>
-    </h2>
-    <div class="Column">
-      <ul class="PostList">
-        {block:Posts}
-          {block:Text}
-            <li class="PostList--Item">
-              <a href="{Permalink}">
-                {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
-                <div class="PostList--Item--Content">
-                  <div class="PostList--Item--Content--Title">{Title}</div>
-                  <div class="PostList--Item--Content--Body">{Body}</div>
-                </div>
-                {block:More}<div class="PostList--Item--More">続きを読む</div>{/block:More}
-              </a>
-            </li>
-          {/block:Text}
-          {block:Photo}
-            <li class="PostList--Item">
-              <a href="{Permalink}">
-                {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
-                <div class="PostList--Item--Content">
-                  <div class="PostList--Item--Content--Image">
-                    <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-                  </div>
-                  <div class="PostList--Item--Content">{Caption}</div>
-                </div>
-              </a>
-            </li>
-          {/block:Photo}
-        {/block:Posts}
-      </ul>
-      <div class="PostList--More">
-        <a href="/tagged/yamaai">もっと →</a>
+    <div class="TopPage--Main--Posts">
+      <div class="TopPage--Main--Posts--Cover">
+        <h2 class="ImageHeading">
+          <a href="/tagged/yamaai">
+            <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_diary.png" alt="山と暮らしと食べものの記録" />
+          </a>
+        </h2>
+        <div class="Column">
+          ${require('../components/PostList.html')}
+          <div class="PostList--More">
+            <a href="/tagged/yamaai">もっと →</a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <h2 class="ImageHeading" id="about">
-      <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_about.png" alt="宿泊・料金" />
-    </h2>
+    <h2 class="ContentHeader" id="about">宿泊・料金</h2>
     <div class="Column">
       <div class="Column--Item">
         <div class="ImageList--Display">
@@ -157,17 +130,15 @@
       </div>
     </div>
 
-    <h2 class="ImageHeading" id="map">
-      <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_map.png" alt="地図" />
-    </h2>
+    <h2 class="ContentHeader" id="map">地図</h2>
     <div class="Column">
       <div class="TopPage--Main--Map">
         <a href="https://goo.gl/maps/4yw8nHpoppD2">&#12306; 819-1155 福岡県糸島市川付570</a>
         <div class="TopPage--Main--Map--Container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.861122789474!2d130.18772251520073!3d33.504990180758256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3a09e3bdbdce634d!2zeWFtYWFpIC3lsbHlkIgt!5e0!3m2!1sja!2sjp!4v1541850471927" frameborder="0" style="border:0; width: 100%; height: 100%;" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106459.57209922475!2d130.119874814711!3d33.50497703511148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541c32cc5fb3595%3A0x3a09e3bdbdce634d!2zeWFtYWFpIC3lsbHlkIgt!5e0!3m2!1sen!2sjp!4v1543014700579" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <div class="TopPage--Main--Map--ButtonContainer">
-          <a class="Button" href="https://goo.gl/maps/4yw8nHpoppD2">google maps</a>
+          <a class="Button" href="https://goo.gl/maps/GSSdTfsf19E2">google maps</a>
         </div>
         <table class="TopPage--Main--Map--Table">
           <tbody>
@@ -189,16 +160,13 @@
       </div>
     </div>
 
-    <h2 class="ImageHeading" id="reservation">
-      <img src="https://khirayama.github.io/yamaai/pages/images/img_nav_reservation.png" alt="予約" />
-    </h2>
+    <h2 class="ContentHeader" id="reservation">予約</h2>
     <div class="Column">
       <div class="TopPage--Main--ReservationBox">
         <div class="TopPage--Main--ReservationBox--Text">
           <p>お電話でお願いします。</p>
           <p>
             <a href="tel:05013133063">050-1313-3063</a>
-            （金から月 10:00 - 16:00）
           </p>
         </div>
       </div>

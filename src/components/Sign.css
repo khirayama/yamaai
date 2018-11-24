@@ -1,18 +1,47 @@
 @import 'components/Column';
 
 .Sign {
-  padding: 12px;
+  text-align: center;
 
   .Sign--InfoBox {
-    text-align: center;
+    display: inline-block;
+    text-align: left;
 
     .Sign--InfoBox--Name {
+      display: inline-block;
       padding: 12px 0;
       font-weight: bold;
+      text-decoration: none;
     }
 
     a {
       text-decoration: underline;
+    }
+  }
+
+  .Sign--InfoBox--SocialList {
+    padding: 12px 0;
+
+    .Sign--InfoBox--SocialList--Item {
+      display: inline-block;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 3px;
+      transition: opacity 200ms ease-out;
+
+      img {
+        filter: contrast(100%) brightness(0%);
+      }
+
+      &:hover {
+        opacity: $opacity;
+      }
+
+      & + .Sign--InfoBox--SocialList--Item {
+        margin-left: 8px;
+      }
     }
   }
 }

@@ -5,51 +5,25 @@
       </a>
     </h2>
 
-    ${require('../components/Navigation.html')}
-
-    <ul class="PostList">
-      {block:Posts}
-        {block:Text}
-          <li class="PostList--Item">
-            <a href="{Permalink}">
-              {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
-              <div class="PostList--Item--Content">
-                <div class="PostList--Item--Content--Title">{Title}</div>
-                <div class="PostList--Item--Content--Body">{Body}</div>
+    <div class="PostsPage--Main--Content">
+      ${require('../components/Category.html')}
+      <div class="PostsPage--Main--Content--Body">
+        ${require('../components/PostList.html')}
+        <div class="PostsPage--Main--Content--Body--Pagination">
+          {block:Pagination}
+            {block:PreviousPage}
+              <div class="PostsPage--Main--Content--Body--Pagination--Previous">
+                <a href="{PreviousPage}">前のページ</a>
               </div>
-              {block:More}<div class="PostList--Item--More">続きを読む</div>{/block:More}
-            </a>
-          </li>
-        {/block:Text}
-        {block:Photo}
-          <li class="PostList--Item">
-            <a href="{Permalink}">
-              {block:Date}<div class="PostList--Item--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
-              <div class="PostList--Item--Content">
-                <div class="PostList--Item--Content--Image">
-                  <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-                </div>
-                <div class="PostList--Item--Content">{Caption}</div>
+            {/block:PreviousPage}
+            {block:NextPage}
+              <div class="PostsPage--Main--Content--Body--Pagination--Next">
+                <a href="{NextPage}">次のページ</a>
               </div>
-            </a>
-          </li>
-        {/block:Photo}
-      {/block:Posts}
-    </ul>
-
-    <div class="PostsPage--Main--Pagination">
-      {block:Pagination}
-        {block:PreviousPage}
-          <div class="PostsPage--Main--Pagination--Previous">
-            <a href="{PreviousPage}">前のページ</a>
-          </div>
-        {/block:PreviousPage}
-        {block:NextPage}
-          <div class="PostsPage--Main--Pagination--Next">
-            <a href="{NextPage}">次のページ</a>
-          </div>
-        {/block:NextPage}
-      {/block:Pagination}
+            {/block:NextPage}
+          {/block:Pagination}
+        </div>
+      </div>
     </div>
 
     ${require('../components/Sign.html')}

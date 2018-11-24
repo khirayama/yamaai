@@ -1,0 +1,13 @@
+<ul class="PostList">
+  {block:Posts}
+    {block:Text}
+      <li class="PostList--Item">
+        <a href="{Permalink}">
+          <div class="PostList--Item--Body">{Body}</div>
+          {block:Date}<div class="PostList--Item--Date">{Year}.{MonthNumber}.{DayOfMonth}.</div>{/block:Date}
+          <div class="PostList--Item--Title">{Title}</div>
+        </a>
+      </li>
+    {/block:Text}
+  {/block:Posts}
+</ul>

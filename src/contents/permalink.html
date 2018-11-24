@@ -6,21 +6,22 @@
       </a>
     </h2>
 
-    ${require('../components/Navigation.html')}
-
     <section class="PostPage--Main--Content">
-      {block:Posts}
-        {block:Text}
-          {block:Date}<div class="PostPage--Main--Content--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
-          <h1>{Title}</h1>
-          <div>{Body}</div>
-        {/block:Text}
-        {block:Photo}
-          {block:Date}<div class="PostPage--Main--Content--Date">{Year}年{MonthNumber}月{DayOfMonth}日</div>{/block:Date}
-          <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-          <div>{Caption}</div>
-        {/block:Photo}
-      {/block:Posts}
+      ${require('../components/Category.html')}
+      <div class="PostPage--Main--Content--Body">
+        {block:Posts}
+          {block:Text}
+            <h1>{Title}</h1>
+            {block:Date}<div class="PostPage--Main--Content--Date">{Year}.{MonthNumber}.{DayOfMonth}</div>{/block:Date}
+            <div>{Body}</div>
+          {/block:Text}
+          {block:Photo}
+            {block:Date}<div class="PostPage--Main--Content--Date">{Year}.{MonthNumber}.{DayOfMonth}</div>{/block:Date}
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+            <div>{Caption}</div>
+          {/block:Photo}
+        {/block:Posts}
+      </div>
     </section>
 
     ${require('../components/Sign.html')}

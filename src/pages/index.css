@@ -4,6 +4,7 @@
 @import 'components/Navigation';
 @import 'components/Sign';
 @import 'components/Footer';
+@import 'components/ContentHeader';
 @import 'components/ImageHeading';
 @import 'components/Column';
 @import 'components/Button';
@@ -11,7 +12,7 @@
 @import 'components/PostList';
 
 .TopPage {
-  background: #fbfbf9;
+  background: rgb(216, 213, 191);
 
   .TopPage--Main {
     .TopPage--Main--CoverImage {
@@ -71,6 +72,23 @@
         width: auto;
         height: calc(189px * 0.14);
         margin-top: 24px;
+      }
+    }
+
+    .TopPage--Main--Posts {
+      position: relative;
+      background-image: url("https://khirayama.github.io/yamaai/pages/images/background_post.png");
+      box-shadow:
+        0 2px 2px 0 rgba(0, 0, 0, 0.88) inset,
+        0 -2px 2px 0 rgba(0, 0, 0, 0.88) inset
+      ;
+
+      .TopPage--Main--Posts--Cover {
+        background: rgba(255, 255, 255, 0.88);
+
+        .Column {
+          padding-bottom: 0;
+        }
       }
     }
 

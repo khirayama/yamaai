@@ -2,34 +2,10 @@
 
 .Header {
   .Header--SubHeader {
-    text-align: right;
     padding: 12px;
 
-    .Header--SubHeader--SocialList {
-      text-align: right;
-      display: inline-block;
-
-      .Header--SubHeader--SocialList--Item {
-        display: inline-block;
-        text-align: center;
-        width: 24px;
-        height: 24px;
-        line-height: 24px;
-        border-radius: 3px;
-        transition: opacity 200ms ease-out;
-
-        img {
-          filter: contrast(100%) brightness(0%);
-        }
-
-        &:hover {
-          opacity: $opacity;
-        }
-
-        & + .Header--SubHeader--SocialList--Item {
-          margin-left: 8px;
-        }
-      }
+    a + a {
+      margin-left: 12px;
     }
   }
 
@@ -50,6 +26,19 @@
         height: 69px;
         z-index: 1;
       }
+    }
+
+    .Header--Content--Copy {
+      position: absolute;
+      top: 183px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      height: 29px;
+      width: auto;
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .Header--Content--Image {

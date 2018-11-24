@@ -2,6 +2,7 @@
 @import 'application/index';
 @import 'components/Header';
 @import 'components/Navigation';
+@import 'components/Category';
 @import 'components/Sign';
 @import 'components/Footer';
 @import 'components/ImageHeading';
@@ -13,24 +14,54 @@
     background: rgba(255, 255, 255, 0.88);
 
     .PostPage--Main--Content {
-      max-width: 568px;
+      max-width: 768px;
       margin: 0 auto;
-      padding: 48px 12px;
+      padding: 36px 0;
 
-      .PostPage--Main--Content--Date {
-        padding: 0 0 12px;
-        color: rgba(0, 0, 0, .44);
-        font-weight: bold;
+      .PostPage--Main--Content--Body {
+        display: inline-block;
+        width: 72%;
+
+        h1 {
+          font-weight: bold;
+          padding: 8px 0;
+        }
+
+        .PostPage--Main--Content--Date {
+          padding: 0 0 24px;
+          color: rgba(0, 0, 0, .44);
+        }
+
+        img {
+          margin: 16px 0 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  .PostPage .PostPage--Main .PostPage--Main--Content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0 12px;
+
+    .PostPage--Main--Content--Body {
+      order: 1;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 12px;
+    }
+
+    .Category {
+      order: 2;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 24px 12px 12px;
+
+      .Category--Logo {
+        width: 100%;
         text-align: center;
-      }
-
-      h1 {
-        font-weight: bold;
-        padding: 12px 0;
-      }
-
-      img {
-        margin: 16px 0 24px;
       }
     }
   }
