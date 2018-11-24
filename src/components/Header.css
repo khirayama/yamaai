@@ -2,7 +2,7 @@
 
 .Header {
   .Header--SubHeader {
-    padding: 12px;
+    padding: 8px 12px;
 
     a + a {
       margin-left: 12px;

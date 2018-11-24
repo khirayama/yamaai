@@ -19,59 +19,61 @@
       position: relative;
       margin: 0 auto;
       text-align: center;
-
-      .TopPage--Main--CoverImage--Ill1,
-      .TopPage--Main--CoverImage--Ill2,
-      .TopPage--Main--CoverImage--Ill3,
-      .TopPage--Main--CoverImage--Ill4,
-      .TopPage--Main--CoverImage--Ill5 {
-        filter: contrast(100%) brightness(0%);
-        position: absolute;
-        z-index: 1;
-      }
-
-      $base: 24px;
-
-      .TopPage--Main--CoverImage--Ill1 {
-        width: 76px;
-        bottom: calc(-8% + $base);
-        right: 24%;
-      }
-
-      .TopPage--Main--CoverImage--Ill2 {
-        width: 68px;
-        bottom: calc(32% + $base);
-        right: 4%;
-      }
-
-      .TopPage--Main--CoverImage--Ill3 {
-        width: 88px;
-        bottom: calc(0 + $base);
-        right: 10%;
-      }
-
-      .TopPage--Main--CoverImage--Ill4 {
-        width: 108px;
-        bottom: calc(12% + $base);
-        left: 4%;
-      }
-
-      .TopPage--Main--CoverImage--Ill5 {
-        width: 68px;
-        bottom: calc(-4% + $base);
-        left: 2%;
-      }
     }
 
     .TopPage--Main--Copy {
+      position: relative;
       text-align: center;
-      padding: 48px 0;
+      padding: 48px 0 64px;
+      max-width: 768px;
+      margin: 0 auto;
 
-      .TopPage--Main--Copy--Image {
+      .TopPage--Main--Copy--Text {
+        position: relative;
+        z-index: 2;
+        background: rgba(216, 213, 191, 0.8);
+      }
+
+      .TopPage--Main--Copy--Ill1,
+      .TopPage--Main--Copy--Ill2,
+      .TopPage--Main--Copy--Ill3,
+      .TopPage--Main--Copy--Ill4,
+      .TopPage--Main--Copy--Ill5 {
+        position: absolute;
         filter: contrast(100%) brightness(0%);
-        width: auto;
-        height: calc(189px * 0.14);
-        margin-top: 24px;
+        height: auto;
+      }
+
+      .TopPage--Main--Copy--Ill1 {
+        bottom: 21px;
+        left: 90%;
+        width: 8%;
+        min-width: 48px;
+      }
+      .TopPage--Main--Copy--Ill2 {
+        top: 32px;
+        left: 81%;
+        width: 8%;
+        min-width: 48px;
+      }
+      .TopPage--Main--Copy--Ill3 {
+        bottom: 41px;
+        left: 74%;
+        width: 8%;
+        min-width: 59px;
+      }
+      .TopPage--Main--Copy--Ill4 {
+        bottom: -12px;
+        right: 82%;
+        width: 8%;
+        min-width: 81px;
+        z-index: 1;
+      }
+      .TopPage--Main--Copy--Ill5 {
+        top: 11px;
+        right: 77%;
+        width: 8%;
+        min-width: 51px;
       }
     }
 
@@ -89,6 +91,14 @@
         .Column {
           padding-bottom: 0;
         }
+      }
+
+      .PostList--Item:nth-of-type(11),
+      .PostList--Item:nth-of-type(12),
+      .PostList--Item:nth-of-type(13),
+      .PostList--Item:nth-of-type(14),
+      .PostList--Item:nth-of-type(15) {
+        display: none;
       }
     }
 
