@@ -30,6 +30,9 @@
         margin: 0;
         vertical-align: top;
       }
+      a {
+        display: inline-block;
+      }
       figure:first-of-type {
         display: inline-block;
 
