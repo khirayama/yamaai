@@ -9,5 +9,13 @@
         </a>
       </li>
     {/block:Text}
+    {block:Photo}
+      <li class="PostList--Item">
+        <a href="{Permalink}">
+          <div class="PostList--Item--Body"><img src="{PhotoURL-500}" alt="{PhotoAlt}" /></div>
+          {block:Date}<div class="PostList--Item--Date">{Year}.{MonthNumber}.{DayOfMonth}.</div>{/block:Date}
+        </a>
+      </li>
+    {/block:Photo}
   {/block:Posts}
 </ul>
