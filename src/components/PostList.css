@@ -30,15 +30,21 @@
         margin: 0;
         vertical-align: top;
       }
-      a {
+
+      img:first-of-type {
         display: inline-block;
       }
+
       figure:first-of-type {
         display: inline-block;
 
         img {
           display: inline-block;
         }
+      }
+
+      a:first-of-type {
+        display: inline-block;
       }
     }
 
