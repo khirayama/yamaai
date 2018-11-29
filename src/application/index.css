@@ -9,3 +9,7 @@ html {
 hr {
   border-bottom: $border;
 }
+
+.Page {
+  overflow-x: hidden;
+}
