@@ -2,6 +2,8 @@
 
 .Header {
   .Header--SubHeader {
+    max-width: 768px;
+    margin: 0 auto;
     padding: 8px 12px;
 
     a + a {
@@ -37,7 +39,6 @@
       height: 29px;
       width: auto;
       font-size: 1.25rem;
-      font-weight: bold;
       letter-spacing: 1px;
     }
 
