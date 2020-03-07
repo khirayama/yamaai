@@ -1,16 +1,12 @@
 .Navigation {
   max-width: 768px;
   margin: 0 auto;
-  padding: 24px 12px;
 
   .Navigation--List {
-    display: flex;
-
     .Navigation--List--Item {
-      flex: 1;
-      text-align: center;
+      display: inline-block;
       font-size: .875rem;
-      padding: 12px 0;
+      padding: 24px 12px;
       font-weight: bold;
       font-size: 1.075rem;
 

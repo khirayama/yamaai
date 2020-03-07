@@ -1,45 +1,20 @@
 @import 'application/vars';
 
 .Header {
-  .Header--SubHeader {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 8px 12px;
-
-    a + a {
-      margin-left: 12px;
-    }
-  }
-
   .Header--Content {
-    position: relative;
-    padding: 88px 12px 0;
     max-width: 768px;
     margin: 0 auto;
 
     .Header--Content--Heading {
       display: inline-block;
-      text-align: center;
       width: 100%;
+      padding: 32px 12px 12px;
 
       img {
-        position: relative;
-        width: 188px;
-        height: 69px;
+        width: 124px;
+        height: auto;
         z-index: 1;
       }
-    }
-
-    .Header--Content--Copy {
-      position: absolute;
-      top: 183px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      height: 29px;
-      width: auto;
-      font-size: 1.25rem;
-      letter-spacing: 1px;
     }
 
     .Header--Content--Image {
@@ -47,13 +22,21 @@
       position: relative;
       max-width: 768px;
       width: auto;
-      min-height: 320px;
+      height: auto;
       justify-content: center;
       align-items: center;
-      top: -24px;
 
       img {
         background: rgba(0, 0, 0, .08);
+      }
+
+      .Header--Content--Image--Copy {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        z-index: 1;
+        letter-spacing: 1px;
+        color: #fff;
       }
     }
   }
