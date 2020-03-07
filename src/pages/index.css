@@ -12,8 +12,11 @@
 @import 'components/NoteList';
 @import 'components/PostList';
 
+/* $background-color: rgb(243, 243, 242); */
+$background-color: rgb(234, 237, 247);
+
 .TopPage {
-  background: rgb(216, 213, 191);
+  background: $background-color;
 
   .TopPage--Main {
     .TopPage--Main--CoverImage {
@@ -32,7 +35,6 @@
         display: inline-block;
         position: relative;
         z-index: 2;
-        background: rgba(216, 213, 191, 0.8);
 
         & + .TopPage--Main--Copy--Text {
           margin: 0.5em 0 0;
@@ -78,6 +80,9 @@
       p + h3 {
         margin-top: 24px;
       }
+      a {
+        text-decoration: 'underline';
+      }
     }
 
     .TopPage--Main--Map {
@@ -93,11 +98,9 @@
         }
       }
 
-      .TopPage--Main--Map--ButtonContainer {
-        text-align: center;
-      }
-
       .TopPage--Main--Map--Table {
+        margin-top: 24px;
+        width: 100%;
         border-collapse: collapse;
 
         th {
