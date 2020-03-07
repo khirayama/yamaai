@@ -1,0 +1,7 @@
+.NoteList {
+  .NoteList--Item {
+    &:before {
+      content: '・';
+    }
+  }
+}
