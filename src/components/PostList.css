@@ -15,11 +15,10 @@
     display: inline-block;
     flex: 1;
     vertical-align: top;
-    padding: 0 4px 12px;
+    padding: 4px;
     overflow: hidden;
     max-width: 25%;
     min-width: 25%;
-    margin-bottom: 36px;
     border-right: 0;
     word-break: break-all;
 
