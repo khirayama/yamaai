@@ -5,10 +5,35 @@
     max-width: 768px;
     margin: 0 auto;
 
+    .Header--Content--FontSizeList {
+      text-align: right;
+
+      .Header--Content--FontSizeList--Item {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+        vertical-align: top;
+
+        &[data-size="small"] {
+          font-size: 0.75em;
+        }
+        &[data-size="medium"] {
+          font-size: 1em;
+        }
+        &[data-size="large"] {
+          font-size: 1.25em;
+        }
+      }
+    }
+
     .Header--Content--Heading {
       display: inline-block;
       width: 100%;
-      padding: 32px 12px 12px;
+      padding: 24px 12px 12px;
 
       img {
         width: 124px;

@@ -229,7 +229,7 @@ if (window.document.body.scrollIntoView) {
 }
 
 // son-age
-const el = window.document.querySelector('.son-age');
+const sonAgeElement = window.document.querySelector('.son-age');
 const birthday = {
   year: 2019,
   month: 6,
@@ -246,5 +246,27 @@ const m1 = (now.getMonth() + 1).toString().padStart(2, '0');
 const d1 = now.getDate().toString().padStart(2, '0');
 
 const age = Math.floor((Number(y1 + m1 + d1) - Number(y + m + d)) / 10000);
-el.innerText = age;
+sonAgeElement.innerText = age;
+
+// font-size
+const fontSizeList = window.document.querySelector('.Header--Content--FontSizeList');
+const fontSizeListItems = fontSizeList.querySelectorAll('.Header--Content--FontSizeList--Item');
+for (let i = 0; i < fontSizeListItems.length; i += 1) {
+  const fontSizeListItem = fontSizeListItems[i];
+  fontSizeListItem.addEventListener('click', () => {
+    const htmlElement = window.document.querySelector('html');
+    let size = '14px';
+    switch (fontSizeListItem.dataset.size) {
+      case 'small': {
+        size = '10px';
+        break;
+      }
+      case 'large': {
+        size = '20px';
+        break;
+      }
+    }
+    htmlElement.style.fontSize = size;
+  });
+}
 </script>
