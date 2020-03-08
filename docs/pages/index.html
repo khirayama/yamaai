@@ -15,4 +15,22 @@
       var src = imageListItemImageElement.src;
       imageListDisplayElement.src = src;
     });
+  }
+
+  if (window.document.body.scrollIntoView) {
+    const navListItems = window.document.querySelectorAll('.Navigation--List--Item');
+    for (let i = 0; i < navListItems.length; i += 1) {
+      const navListItem = navListItems[i];
+      navListItem.addEventListener('click', (event) => {
+        event.preventDefault();
+        const anchor = event.currentTarget.querySelector('a');
+        const tmp = anchor.href.split('#');
+        const anchorId = '#' + tmp[tmp.length - 1];
+        const el = window.document.querySelector(anchorId);
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
   }</script></body></html>
