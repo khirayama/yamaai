@@ -58,8 +58,6 @@ $background-color: rgb(234, 237, 247);
         }
       }
 
-      .PostList--Item:nth-of-type(11),
-      .PostList--Item:nth-of-type(12),
       .PostList--Item:nth-of-type(13),
       .PostList--Item:nth-of-type(14),
       .PostList--Item:nth-of-type(15) {

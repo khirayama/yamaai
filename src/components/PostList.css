@@ -84,15 +84,6 @@
       }
     }
   }
-  .PostList--Item:nth-child(9),
-  .PostList--Item:nth-child(10),
-  .PostList--Item:nth-child(11),
-  .PostList--Item:nth-child(12),
-  .PostList--Item:nth-child(13),
-  .PostList--Item:nth-child(14),
-  .PostList--Item:nth-child(15) {
-    display: none;
-  }
 }
 
 .PostList--More {
