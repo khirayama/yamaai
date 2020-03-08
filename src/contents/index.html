@@ -8,7 +8,7 @@
 
     <p class="TopPage--Main--Copy">
       <span class="TopPage--Main--Copy--Text">
-        民泊yamaai - 山合 - は福岡県糸島市の背振山地の麓で、夫婦と息子0歳、猫3匹が共に暮らす家です。<br>
+        民泊yamaai - 山合 - は福岡県糸島市の背振山地の麓で、夫婦と息子<span class="son-age">0</span>歳、猫3匹が共に暮らす家です。<br>
         私たちは、2017年にこの地に移り住み、自然農に取り組みながら、山の澄んだ空気、おいしい井戸水、季節を感じられる草木、いきものと共に暮らしています。<br>
       </span>
       <span class="TopPage--Main--Copy--Text">
@@ -191,40 +191,60 @@
   </main>
 </section>
 <script>
-  var imageListDisplayElement = window.document.querySelector('.ImageList--Display img');
-  var imageListItemElements = window.document.querySelectorAll('.ImageList--Item');
-  for (var i = 0; i < imageListItemElements.length; i++) {
-    var imageListItemElement = imageListItemElements[i];
+var imageListDisplayElement = window.document.querySelector('.ImageList--Display img');
+var imageListItemElements = window.document.querySelectorAll('.ImageList--Item');
+for (var i = 0; i < imageListItemElements.length; i++) {
+  var imageListItemElement = imageListItemElements[i];
 
-    if (i === 0) {
-      var imageListItemImageElement = imageListItemElement.querySelector('img');
-      var src = imageListItemImageElement.src;
-      imageListDisplayElement.src = src;
-    }
+  if (i === 0) {
+    var imageListItemImageElement = imageListItemElement.querySelector('img');
+    var src = imageListItemImageElement.src;
+    imageListDisplayElement.src = src;
+  }
 
-    imageListItemElement.addEventListener('click', function (event) {
-      var el = event.currentTarget;
-      var imageListItemImageElement = el.querySelector('img');
-      var src = imageListItemImageElement.src;
-      imageListDisplayElement.src = src;
+  imageListItemElement.addEventListener('click', function (event) {
+    var el = event.currentTarget;
+    var imageListItemImageElement = el.querySelector('img');
+    var src = imageListItemImageElement.src;
+    imageListDisplayElement.src = src;
+  });
+}
+
+if (window.document.body.scrollIntoView) {
+  const navListItems = window.document.querySelectorAll('.Navigation--List--Item');
+  for (let i = 0; i < navListItems.length; i += 1) {
+    const navListItem = navListItems[i];
+    navListItem.addEventListener('click', (event) => {
+      event.preventDefault();
+      const anchor = event.currentTarget.querySelector('a');
+      const tmp = anchor.href.split('#');
+      const anchorId = '#' + tmp[tmp.length - 1];
+      const el = window.document.querySelector(anchorId);
+      el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   }
+}
 
-  if (window.document.body.scrollIntoView) {
-    const navListItems = window.document.querySelectorAll('.Navigation--List--Item');
-    for (let i = 0; i < navListItems.length; i += 1) {
-      const navListItem = navListItems[i];
-      navListItem.addEventListener('click', (event) => {
-        event.preventDefault();
-        const anchor = event.currentTarget.querySelector('a');
-        const tmp = anchor.href.split('#');
-        const anchorId = '#' + tmp[tmp.length - 1];
-        const el = window.document.querySelector(anchorId);
-        el.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
-    }
-  }
+// son-age
+const el = window.document.querySelector('.son-age');
+const birthday = {
+  year: 2019,
+  month: 6,
+  date: 3,
+};
+const bd = new Date(birthday.year, birthday.month - 1, birthday.date);
+const now = new Date();
+
+const y = bd.getFullYear().toString().padStart(4, '0');
+const m = (bd.getMonth() + 1).toString().padStart(2, '0');
+const d = bd.getDate().toString().padStart(2, '0');
+const y1 = now.getFullYear().toString().padStart(4, '0');
+const m1 = (now.getMonth() + 1).toString().padStart(2, '0');
+const d1 = now.getDate().toString().padStart(2, '0');
+
+const age = Math.floor((Number(y1 + m1 + d1) - Number(y + m + d)) / 10000);
+el.innerText = age;
 </script>
