@@ -58,9 +58,9 @@ $background-color: rgb(234, 237, 247);
         }
       }
 
-      .PostList--Item:nth-of-type(13),
-      .PostList--Item:nth-of-type(14),
-      .PostList--Item:nth-of-type(15) {
+      .PostList--Item:nth-child(13),
+      .PostList--Item:nth-child(14),
+      .PostList--Item:nth-child(15) {
         display: none;
       }
     }
