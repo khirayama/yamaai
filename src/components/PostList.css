@@ -84,7 +84,7 @@
       }
     }
   }
-  .PostList--Item:nth-child(9)
+  .PostList--Item:nth-child(9),
   .PostList--Item:nth-child(10),
   .PostList--Item:nth-child(11),
   .PostList--Item:nth-child(12),
