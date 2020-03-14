@@ -5,12 +5,6 @@
   max-width: 768px;
   margin: 0 auto;
 
-  img {
-    width: 100%;
-    height: auto;
-    margin: 12px 0 16px;
-  }
-
   .PostList--Item {
     display: inline-block;
     flex: 1;
@@ -25,61 +19,43 @@
     .PostList--Item--Body {
       position: relative;
       background: rgba(100, 100, 100, 0.44);
-      padding-top: 100%;
+      padding-top: 75%;
 
-      * {
-        display: none;
-        padding: 0;
-        margin: 0;
-        vertical-align: top;
-      }
-
-      img:first-of-type {
-        display: inline-block;
+      .PostList--Item--Body--Image {
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        transform: translateY(-50%);
-      }
-
-      figure:first-of-type {
-        display: inline-block;
         width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        height: 100%;
+        background: red;
 
-        img {
-          display: inline-block;
-        }
-      }
-
-      a:first-of-type {
-        display: inline-block;
-      }
-
-      .PostList--Item--Body--Info {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        display: inline-block;
-        width: 100%;
-        text-align: right;
-        color: #fff;
-
-        .PostList--Item--Body--Info--Date {
-          display: inline-block;
-          width: 100%;
-          padding: 4px;
+        * {
+          display: none;
+          padding: 0;
+          margin: 0;
+          vertical-align: top;
         }
 
-        .PostList--Item--Body--Info--Title {
+        img:first-of-type {
+          object-fit: cover;
           display: inline-block;
           width: 100%;
-          padding: 4px;
-          font-weight: bold;
+          height: 100%;
+        }
+
+        figure:first-of-type {
+          object-fit: cover;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+
+          img {
+            display: inline-block;
+          }
+        }
+
+        a:first-of-type {
+          display: inline-block;
         }
       }
     }

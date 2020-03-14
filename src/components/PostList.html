@@ -4,10 +4,8 @@
       <li class="PostList--Item">
         <a href="{Permalink}">
           <div class="PostList--Item--Body">
-            {Body}
-            <div class="PostList--Item--Body--Info">
-              <div class="PostList--Item--Body--Info--Title">{Title}</div>
-              {block:Date}<div class="PostList--Item--Body--Info--Date">{Year}.{MonthNumber}.{DayOfMonth}</div>{/block:Date}
+            <div class="PostList--Item--Body--Image">
+              {Body}
             </div>
           </div>
         </a>
@@ -17,9 +15,8 @@
       <li class="PostList--Item">
         <a href="{Permalink}">
           <div class="PostList--Item--Body">
-            <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-            <div class="PostList--Item--Body--Info">
-              {block:Date}<div class="PostList--Item--Body--Info--Date">{Year}.{MonthNumber}.{DayOfMonth}</div>{/block:Date}
+            <div class="PostList--Item--Body--Image">
+              <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
             </div>
           </div>
         </a>
