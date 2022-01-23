@@ -79,7 +79,7 @@ $background-color: rgb(234, 237, 247);
         margin-top: 24px;
       }
       a {
-        text-decoration: 'underline';
+        text-decoration: underline;
       }
     }
 
